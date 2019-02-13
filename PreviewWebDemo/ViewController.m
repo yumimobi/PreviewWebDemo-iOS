@@ -13,11 +13,10 @@
 @interface ViewController ()<UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *warningLab;
-
 @property (weak, nonatomic) IBOutlet UITextView *htmlTextView;
-
 @property (weak, nonatomic) IBOutlet UISwitch *isSupportMarid;
-
+@property (weak, nonatomic) IBOutlet UISwitch *isPreRender;
+@property (nonatomic) PAPreviewAdViewController *detailVc;
 @end
 
 @implementation ViewController
@@ -25,8 +24,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
 }
+
+
+- (IBAction)presentAd:(id)sender {
+    self.detailVc.view.hidden = NO;
+}
+
 - (IBAction)loadHtmlAction:(UIButton *)sender {
     [self loadHtml];
 }
@@ -41,23 +45,24 @@
         return;
     }
     
-    PAPreviewAdViewController *detailVc = [[PAPreviewAdViewController alloc] init];
-    detailVc.isSupportMarid = self.isSupportMarid.on;
+    self.detailVc = [[PAPreviewAdViewController alloc] init];
+    self.detailVc.isSupportMarid = self.isSupportMarid.on;
+    if (self.isPreRender.on) {
+        self.detailVc.view.hidden = YES;
+        [self.view addSubview:self.detailVc.view];
+    } else {
+        [self presentViewController:self.detailVc animated:YES completion:nil];
+    }
     PAAdsModel *model = [[PAAdsModel alloc] init];
     model.support_function = 3;
-    
-    detailVc.adModel = model;
-    
+    self.detailVc.adModel = model;
     if (![text hasPrefix:@"http://"] && ![text hasPrefix:@"https://"]) {
         self.warningLab.text = @"load html strings";
-        [detailVc loadHTMLString:text isReplace:YES];
+        [self.detailVc loadHTMLString:text isReplace:YES];
     }else{
         self.warningLab.text = @"load html url";
-        [detailVc setLoadUrl:text];
+        [self.detailVc setLoadUrl:text];
     }
-    
-    [self presentViewController:detailVc animated:YES completion:nil];
-    
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{

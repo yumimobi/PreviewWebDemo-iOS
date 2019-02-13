@@ -14,7 +14,7 @@
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UISwitch *isSupportMarid;
-
+@property (nonatomic) PAPreviewAdViewController *detailVc;
 @end
 
 @implementation MainViewController
@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)present:(UIButton *)sender {
+    [self presentViewController:self.detailVc animated:YES completion:nil];
 }
 
 - (IBAction)requestJsonAction:(UIButton *)sender {
@@ -80,6 +83,7 @@
     PAPreviewAdViewController *detailVc = [[PAPreviewAdViewController alloc] init];
     detailVc.adModel = admodel;
     detailVc.isSupportMarid = self.isSupportMarid.on;
+    self.detailVc = detailVc;
     if (![admodel.playable_ads_html hasPrefix:@"http://"] && ![admodel.playable_ads_html hasPrefix:@"https://"]) {
         
         [detailVc loadHTMLString:admodel.playable_ads_html isReplace:NO];
@@ -88,7 +92,7 @@
         [detailVc setLoadUrl:admodel.playable_ads_html];
     }
     
-    [self presentViewController:detailVc animated:YES completion:nil];
+//    [self presentViewController:detailVc animated:YES completion:nil];
 }
 
 
