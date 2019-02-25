@@ -79,9 +79,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Se-Yf-jN6">
-                                <rect key="frame" x="151" y="463" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Se-Yf-jN6">
+                                <rect key="frame" x="112.5" y="409.5" width="150" height="44"/>
                                 <state key="normal" title="present"/>
                                 <connections>
                                     <action selector="present:" destination="chc-4O-0lO" eventType="touchUpInside" id="1jb-5I-Fh4"/>
@@ -94,6 +93,9 @@
                             <constraint firstItem="Its-FT-Kxh" firstAttribute="height" secondItem="fyA-8I-r3w" secondAttribute="height" id="5VR-60-xmE"/>
                             <constraint firstItem="EDg-jv-zrG" firstAttribute="top" secondItem="fyA-8I-r3w" secondAttribute="bottom" constant="40" id="83q-zv-6cK"/>
                             <constraint firstItem="eMg-ge-xbs" firstAttribute="leading" secondItem="Jug-79-byj" secondAttribute="leading" constant="20" id="AoF-rn-rks"/>
+                            <constraint firstItem="7Se-Yf-jN6" firstAttribute="width" secondItem="EDg-jv-zrG" secondAttribute="width" id="B1W-1s-JeC"/>
+                            <constraint firstItem="7Se-Yf-jN6" firstAttribute="height" secondItem="EDg-jv-zrG" secondAttribute="height" id="B4W-9S-5eF"/>
+                            <constraint firstItem="7Se-Yf-jN6" firstAttribute="top" secondItem="EDg-jv-zrG" secondAttribute="bottom" constant="20" id="Ebg-b9-Wwq"/>
                             <constraint firstItem="fyA-8I-r3w" firstAttribute="centerY" secondItem="Jug-79-byj" secondAttribute="centerY" constant="-50" id="HR1-gc-Ryk"/>
                             <constraint firstItem="Its-FT-Kxh" firstAttribute="width" secondItem="fyA-8I-r3w" secondAttribute="width" id="Hr6-h6-Lq9"/>
                             <constraint firstItem="EDg-jv-zrG" firstAttribute="height" secondItem="fyA-8I-r3w" secondAttribute="height" id="JOI-4m-hxp"/>
@@ -101,6 +103,7 @@
                             <constraint firstItem="Its-FT-Kxh" firstAttribute="leading" secondItem="fyA-8I-r3w" secondAttribute="leading" id="VNM-eK-czP"/>
                             <constraint firstItem="fyA-8I-r3w" firstAttribute="centerX" secondItem="Jug-79-byj" secondAttribute="centerX" id="gUh-pd-wtk"/>
                             <constraint firstItem="EDg-jv-zrG" firstAttribute="leading" secondItem="fyA-8I-r3w" secondAttribute="leading" id="imn-8N-q95"/>
+                            <constraint firstItem="7Se-Yf-jN6" firstAttribute="centerX" secondItem="EDg-jv-zrG" secondAttribute="centerX" id="k2Z-1r-ew3"/>
                             <constraint firstItem="plF-oC-EQ0" firstAttribute="centerY" secondItem="eMg-ge-xbs" secondAttribute="centerY" id="kJw-6u-koa"/>
                             <constraint firstItem="EDg-jv-zrG" firstAttribute="width" secondItem="fyA-8I-r3w" secondAttribute="width" id="kcf-RC-t58"/>
                             <constraint firstItem="eMg-ge-xbs" firstAttribute="top" secondItem="5Qv-2C-clb" secondAttribute="bottom" constant="20" id="vaa-3j-LYl"/>
