@@ -26,9 +26,9 @@
 @end
 
 @implementation PAPreviewAdViewController
-//- (void)dealloc {
-//    [self.previewAdWebView removeObserver:self forKeyPath:@"estimatedProgress"];
-//}
+- (void)dealloc {
+    [self.previewAdWebView removeObserver:self forKeyPath:@"estimatedProgress"];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -200,9 +200,22 @@
     }
 }
 
+- (void)showAlert:(NSString *)message{
+    UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+    [alertVc addAction:confirm];
+    
+    [self presentViewController:alertVc animated:YES completion:nil];
+}
+
 #pragma mark: webview call back
 
+
 - (void)handlePlayablePageMessage:(NSString *)msg {
+    
+    [self showAlert:msg];
+    
     if ([msg isEqualToString:@"user_did_tap_install"]) {
         NSLog(@"user_did_tap_install");
 //         [self.appStore present];
@@ -218,6 +231,7 @@
         [self onBackAction:nil];
     }
 
+    
 //    NSLog(@" --- %@",msg);
 //    if ([msg isEqualToString:@"video_did_end_loading"]) {
 //
@@ -331,6 +345,7 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
         [config.userContentController addUserScript:script];
         [config.userContentController addScriptMessageHandler:self name:@"zplayads"];
         config.allowsInlineMediaPlayback = YES;
+        
         CGRect frame =
             CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
         _previewAdWebView = [[WKWebView alloc] initWithFrame:frame configuration:config];

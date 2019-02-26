@@ -24,6 +24,9 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)present:(UIButton *)sender {
+    if (!self.detailVc) {
+        return;
+    }
     [self presentViewController:self.detailVc animated:YES completion:nil];
 }
 
