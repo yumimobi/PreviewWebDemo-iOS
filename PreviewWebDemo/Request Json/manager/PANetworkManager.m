@@ -72,12 +72,10 @@
     [[manager
       dataTaskWithRequest:request
       completionHandler:^(NSURLResponse *_Nonnull response, id _Nullable responseObject, NSError *_Nullable error) {
-          
           if (error) {
               failure(error);
               return ;
           }
-          
           NSDictionary *dictFromData = [NSJSONSerialization JSONObjectWithData:responseObject
                                                                        options:NSJSONReadingAllowFragments
                                                                          error:&error];

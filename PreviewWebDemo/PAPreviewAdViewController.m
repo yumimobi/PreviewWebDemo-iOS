@@ -15,14 +15,11 @@
 
 
 @interface PAPreviewAdViewController () <WKScriptMessageHandler, WKNavigationDelegate>
-
 @property (nonatomic) WKWebView *previewAdWebView;
 @property (nonatomic) UIProgressView *progressBar;
 @property (nonatomic) UIImageView *backImgView;
 @property (nonatomic) UIButton *backBtn;
-
 @property (nonatomic) ZplayAppStore  *appStore;
-
 @end
 
 @implementation PAPreviewAdViewController
@@ -58,18 +55,15 @@
     }
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.previewAdWebView loadRequest:request];
-    
 }
 
 - (void)loadHTMLString:(NSString *)htmlStr isReplace:(BOOL)isReplace{
     if (!self.previewAdWebView) {
         return;
     }
-    
     if (htmlStr.length == 0) {
         return;
     }
-    
     if (isReplace) {
         htmlStr = [htmlStr stringByReplacingOccurrencesOfString:@"\\n" withString:@""];
         htmlStr = [htmlStr stringByReplacingOccurrencesOfString:@"\\r" withString:@""];
@@ -77,10 +71,7 @@
         htmlStr = [htmlStr stringByReplacingOccurrencesOfString:@"\\\\" withString:@"\\"];
         htmlStr = [htmlStr stringByReplacingOccurrencesOfString:@"\\\"" withString:@"\""];
     }
-   
-
     [self.previewAdWebView loadHTMLString:htmlStr baseURL:nil];
-
 }
 
 - (void)layoutBackUI {
@@ -187,7 +178,6 @@
                                  weakSelf.previewAdWebView.navigationDelegate = nil;
                                  weakSelf.previewAdWebView = nil;
                              }];
-  
 }
 
 - (void)openAppstore:(NSURL *)openUrl{
@@ -210,12 +200,8 @@
 }
 
 #pragma mark: webview call back
-
-
 - (void)handlePlayablePageMessage:(NSString *)msg {
-    
     [self showAlert:msg];
-    
     if ([msg isEqualToString:@"user_did_tap_install"]) {
         NSLog(@"user_did_tap_install");
 //         [self.appStore present];
@@ -224,14 +210,10 @@
         if (self.adModel.support_function == 2) {
             [self openAppstore:openUrl];
         }
-        
     }else if ([msg isEqualToString:@"close_playable_ads"]) {
         NSLog(@"close zplayads...");
-        
         [self onBackAction:nil];
     }
-
-    
 //    NSLog(@" --- %@",msg);
 //    if ([msg isEqualToString:@"video_did_end_loading"]) {
 //
@@ -251,7 +233,6 @@
 //        NSLog(@"close zplayads...");
 //        [self onBackAction:self.backBtn];
 //    }
-    
 }
 
 #pragma mark - kvo

@@ -70,14 +70,11 @@
 }
 
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString*)text{
-    
     if ([text isEqualToString:@"\n"]) {
          [self loadHtml];
         return NO;
-        
     }
     return YES;
-    
 }
 
 

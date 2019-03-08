@@ -88,10 +88,8 @@
     detailVc.isSupportMarid = self.isSupportMarid.on;
     self.detailVc = detailVc;
     if (![admodel.playable_ads_html hasPrefix:@"http://"] && ![admodel.playable_ads_html hasPrefix:@"https://"]) {
-        
         [detailVc loadHTMLString:admodel.playable_ads_html isReplace:NO];
     }else{
-        
         [detailVc setLoadUrl:admodel.playable_ads_html];
     }
     

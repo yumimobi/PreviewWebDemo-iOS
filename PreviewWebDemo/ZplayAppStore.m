@@ -60,7 +60,6 @@
     while (topController.presentedViewController) {
         topController = topController.presentedViewController;
     }
-    
     return topController;
 }
 
@@ -85,7 +84,6 @@
                           NSLog(@"--%@",error);
                           return;
                       }
-                     
                       weakSelf.appStoreLoaded = result;
                   }];
 }
