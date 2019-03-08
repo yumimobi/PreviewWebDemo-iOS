@@ -61,7 +61,7 @@
                                 <rect key="frame" x="87.5" y="94" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="FZC-mY-7a7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="FZC-mY-7a7"/>
                                     <constraint firstAttribute="height" constant="30" id="hgr-s8-wIV"/>
                                 </constraints>
                                 <state key="normal" title="support_function = 2">
@@ -152,11 +152,11 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exp-xP-0bJ">
-                                <rect key="frame" x="259" y="74" width="100" height="30"/>
+                                <rect key="frame" x="151" y="74" width="208" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="F96-g6-qRf"/>
-                                    <constraint firstAttribute="width" constant="100" id="m8o-At-8sP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="m8o-At-8sP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Load Html">
@@ -173,7 +173,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input html" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-IO-Zzh">
-                                <rect key="frame" x="16" y="74" width="233" height="30"/>
+                                <rect key="frame" x="16" y="74" width="125" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wC5-7z-lfy"/>
                                 </constraints>
@@ -198,7 +198,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="support marid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlE-65-eg5">
                                 <rect key="frame" x="82" y="537" width="150" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="pzA-ZL-b5v"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="pzA-ZL-b5v"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -207,7 +207,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="preRender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03I-Tn-qj5">
                                 <rect key="frame" x="82" y="590" width="150" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="ni3-gX-OCQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ni3-gX-OCQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -217,7 +217,7 @@
                                 <rect key="frame" x="263" y="537" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="kxk-eM-L19"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="kxk-eM-L19"/>
                                 </constraints>
                                 <state key="normal" title="Present">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
