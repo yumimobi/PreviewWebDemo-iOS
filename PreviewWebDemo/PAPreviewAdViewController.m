@@ -201,7 +201,7 @@
 
 #pragma mark: webview call back
 - (void)handlePlayablePageMessage:(NSString *)msg {
-    [self showAlert:msg];
+//    [self showAlert:msg];
     if ([msg isEqualToString:@"user_did_tap_install"]) {
         NSLog(@"user_did_tap_install");
 //         [self.appStore present];
