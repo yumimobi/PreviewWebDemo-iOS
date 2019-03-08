@@ -417,7 +417,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PreviewWebDemo/Pods-PreviewWebDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PreviewWebDemo/Pods-PreviewWebDemo-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -430,7 +430,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PreviewWebDemo/Pods-PreviewWebDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PreviewWebDemo/Pods-PreviewWebDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7FEB533FBC2CB97243AFB403 /* [CP] Check Pods Manifest.lock */ = {
